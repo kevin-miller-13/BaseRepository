@@ -6,3 +6,4 @@ jobs:
       - uses: avakar/tag-and-release@v1
         with:
           tag_name: cooth
+          github_token: ${{ secrets.GITHUB_TOKEN }}
