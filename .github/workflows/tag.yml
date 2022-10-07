@@ -2,15 +2,20 @@ on: workflow_dispatch
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: '0'
       
-      - name: Run some git commands
-        run: |
-         git config user.name "GitHub Actions Bot"
-         git config user.email "<>"
-         git tag -a v1.4 -m "my version 1.4"
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: testtag
+          release_name: testrelease
+          draft: false
+          prerelease: false
          
