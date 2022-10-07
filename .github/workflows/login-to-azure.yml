@@ -18,5 +18,5 @@ jobs:
           azcliversion: 2.0.72
           inlineScript: |
                az account set --subscription 6229e38b-b55a-42df-b5e3-028bf5d64be3
-               az functionapp list  --subscription 6229e38b-b55a-42df-b5e3-028bf5d64be3
+
                
