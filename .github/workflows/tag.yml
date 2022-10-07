@@ -4,10 +4,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout GitHub action'
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       
       - name: 'Create tag'
-      - uses: avakar/tag-and-release@v1
+        uses: avakar/tag-and-release@v1
         with:
           tag_name: cooth
           
