@@ -18,4 +18,5 @@ jobs:
           azcliversion: 2.0.72
           inlineScript: |
                az account show
+               az functionapp list
                
