@@ -44,5 +44,8 @@ jobs:
             value: '$NEW_MAJOR_VERSION'   
             
          - name: Commit files
-           run: git commit -m 'Kevins message'
+           run: |
+            git config --local user.email "kevinm@korbicom.com"
+            git config --local user.name "GitHub Action"
+            git commit -m 'Kevins message'
     
