@@ -27,4 +27,11 @@ jobs:
              echo $MAJOR
              echo $MINOR
            
-               
+         - name: Autoincrement a new major version
+           run: |
+             echo "NEW_MAJOR_VERSION=$((${{ env.MAJOR }}+1))" >> $GITHUB_ENV
+             
+         - name: Test
+           run: |
+             echo $MAJOR
+             echo $NEW_MAJOR_VERSION             
