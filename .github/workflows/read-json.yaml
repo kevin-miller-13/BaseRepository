@@ -41,7 +41,7 @@ jobs:
            with:
             file: package.json
             field: Major
-            value: "1.2.2"   
+            value: 2  
             
          - name: Commit files
            run: |
