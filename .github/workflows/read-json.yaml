@@ -47,5 +47,6 @@ jobs:
            run: |
             git config --local user.email "kevinm@korbicom.com"
             git config --local user.name "GitHub Action"
+            git add -A
             git commit -m 'Kevins message'
     
