@@ -3,7 +3,7 @@ name: Deploy DotNet project to function app with a Windows environment
 on: [push]
 
 env:
-  AZURE_FUNCTIONAPP_NAME: kevin-test-dev  # set this to your application's name
+  AZURE_FUNCTIONAPP_NAME: GitHubActionsTestFunc  # set this to your application's name
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'    # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '6.0.401'              # set this to the dotnet version to use
 
