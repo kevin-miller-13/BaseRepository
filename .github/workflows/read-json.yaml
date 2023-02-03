@@ -11,12 +11,13 @@ jobs:
          - name: Checkout
            uses: actions/checkout@v2
             
-         - name: get properties
+         - name: Read Json File
            id: json_properties
            uses: zoexx/github-action-json-file-properties@release
            with:
             file_path: ".github/workflows/package.json"
          - run: |
-              echo "$VERSION={{steps.json_properties.outputs.version}}" >> $GITHUB_ENV
+              $VERSION={{ steps.json_properties.outputs.version }}
+              
          - name: Test
            run: echo $VERSION
