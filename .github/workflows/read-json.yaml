@@ -16,22 +16,15 @@ jobs:
            uses: zoexx/github-action-json-file-properties@release
            with:
             file_path: ".github/workflows/package.json"
-         - run: echo "VERSION=${{ steps.json_properties.outputs.version }}" >> $GITHUB_ENV
+         - run: |
+             echo "BUILD=${{ steps.json_properties.outputs.Build }}" >> $GITHUB_ENV
+             echo "MAJOR=${{ steps.json_properties.outputs.Major }}" >> $GITHUB_ENV
+             echo "MINOR=${{ steps.json_properties.outputs.Minor }}" >> $GITHUB_ENV
               
          - name: Test
-           run: echo $VERSION
+           run: |
+             echo $BUILD
+             echo $MAJOR
+             echo $MINOR
            
-         - name: Parse version string
-           id: semver_parser 
-           uses: booxmedialtd/ws-action-parse-semver@v1
-           with:
-            input_string: '1.0.4'
-        
-         - name: Use version string
-           run: | 
-               echo "v${{ steps.semver_parser.outputs.major }}"
-               echo "v${{ steps.semver_parser.outputs.minor }}"
-               echo "v${{ steps.semver_parser.outputs.patch }}"
-               echo "v${{ steps.semver_parser.outputs.prerelease }}"
-               echo "v${{ steps.semver_parser.outputs.build }}"
-               echo "v${{ steps.semver_parser.outputs.fullversion }}"           
+               
