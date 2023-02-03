@@ -18,18 +18,18 @@ jobs:
      - name: Create Tag
        uses: actions/github-script@v3
        env:
-          TAG: 'Mytag4'
+          TAG: 'Mytag5'
        with:
           github-token: ${{ github.token }}
           script: |
             github.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-             ref: "refs/tags/Mytag4",
+             ref: "refs/tags/Mytag5",
               sha: context.sha
             })
      - name: Create release
        uses: ncipollo/release-action@v1
        with:
-        tag: 'Mytag4'
+        tag: 'Mytag5'
         token: ${{ secrets.GITHUB_TOKEN }}
