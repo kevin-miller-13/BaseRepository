@@ -17,4 +17,6 @@ jobs:
            with:
             file_path: ".github/workflows/package.json"
          - run: |
-              echo ${{steps.json_properties.outputs.version}}
+              echo "$VERSION={{steps.json_properties.outputs.version}}" >> $GITHUB_ENV
+         - name: Test
+           run: echo $VERSION
