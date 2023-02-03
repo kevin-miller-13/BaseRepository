@@ -25,7 +25,7 @@ jobs:
            id: semver_parser 
            uses: booxmedialtd/ws-action-parse-semver@v1
            with:
-            input_string: $VERSION
+            input_string: "$VERSION"
         
          - name: Use version string
            run: | 
