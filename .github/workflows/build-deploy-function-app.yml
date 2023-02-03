@@ -6,6 +6,7 @@ env:
   AZURE_FUNCTIONAPP_NAME: GitHubActionsTestFunc  # set this to your application's name
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'    # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '6.0.401'              # set this to the dotnet version to use
+  DOTNET3_VERSION: "3."
 
 jobs:
   build-and-deploy:
@@ -18,6 +19,11 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Setup DotNet ${{ env.DOTNET3_VERSION }} Environment
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET3_VERSION }}
 
     - name: 'Resolve Project Dependencies Using Dotnet'
       shell: pwsh
