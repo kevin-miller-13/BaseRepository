@@ -1,3 +1,2 @@
 # Testing
-Kevins test area
-Change
+Removed tests
