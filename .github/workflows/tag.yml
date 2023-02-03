@@ -28,8 +28,18 @@ jobs:
              ref: "refs/tags/Mytag5",
               sha: context.sha
             })
-     - name: Create release
-       uses: ncipollo/release-action@v1
+     - name: Create Release
+       id: create_release
+       uses: actions/create-release@latest
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        with:
-        tag: 'Mytag5'
-        token: ${{ secrets.GITHUB_TOKEN }}
+           tag_name: ${{ github.ref }}
+           release_name: Release ${{ github.ref }}
+           body: |
+             ${{ steps.Changelog.outputs.changelog }}
+           draft: false
+           prerelease: false       
+          
+
+          
