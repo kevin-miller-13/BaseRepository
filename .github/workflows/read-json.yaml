@@ -40,8 +40,8 @@ jobs:
            uses: jossef/action-set-json-field@v2.1
            with:
             file: package.json
-            field: MAJOR
-            value: '$NEW_MAJOR_VERSION'   
+            field: Major
+            value: "1.2.2"   
             
          - name: Commit files
            run: |
