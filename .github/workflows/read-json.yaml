@@ -42,4 +42,7 @@ jobs:
             file: package.json
             field: MAJOR
             value: '$NEW_MAJOR_VERSION'   
+            
+         - name: Commit files
+           run: git commit -m 'Kevins message'
     
