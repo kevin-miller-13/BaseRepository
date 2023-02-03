@@ -7,6 +7,10 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         steps:
+        
+         - name: Checkout
+           uses: actions/checkout@v2
+            
          - name: get properties
            id: json_properties
            uses: zoexx/github-action-json-file-properties@release
