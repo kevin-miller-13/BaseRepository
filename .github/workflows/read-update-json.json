@@ -7,12 +7,13 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
 
-- name: get properties
-  id: json_properties
-  uses: zoexx/github-action-json-file-properties@release
-  with:
-    file_path: "package.json"
+ steps:
+ - name: get properties
+   id: json_properties
+   uses: zoexx/github-action-json-file-properties@release
+   with:
+     file_path: "package.json"
 
-- run: |
-    echo ${{steps.json_properties.outputs.name}}
-    echo ${{steps.json_properties.outputs.version}}
+ - run: |
+     echo ${{steps.json_properties.outputs.name}}
+     echo ${{steps.json_properties.outputs.version}}
