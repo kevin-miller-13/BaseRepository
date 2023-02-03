@@ -1,1 +1,1 @@
-testing a release 6
+testing a release 7
