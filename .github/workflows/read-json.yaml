@@ -40,7 +40,7 @@ jobs:
            uses: schdck/create-env-json@v1
            id: create-env
            with:
-            file-name: 'package.json'
-            Build: "$BUILD"
-            Major: "$NEW_MAJOR_VERSION"
-            Minor: "$MINOR"
+            file-name: 'package1.json'
+            Build: echo $BUILD
+            Major: echo $NEW_MAJOR_VERSION
+            Minor: echo $MINOR
