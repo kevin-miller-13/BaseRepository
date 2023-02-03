@@ -16,8 +16,7 @@ jobs:
            uses: zoexx/github-action-json-file-properties@release
            with:
             file_path: ".github/workflows/package.json"
-         - run: |
-              $VERSION={{ steps.json_properties.outputs.version }}
+         - run: echo "$VERSION={{ steps.json_properties.outputs.version }}" >> $GITHUB_ENV
               
          - name: Test
            run: echo $VERSION
