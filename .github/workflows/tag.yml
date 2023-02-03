@@ -15,25 +15,22 @@ jobs:
        run: |
           echo This demo file shows a 
           echo very basic and easy-to-understand workflow.          
-     - name: Set Tag Output
-       id: set-tag
-       run:  echo "::set-output name=tag_name::$(sh ./.github/workflows/get-version.sh)"
      - name: Create Tag
        uses: actions/github-script@v3
        env:
-          TAG: ${{ steps.set-tag.outputs.tag_name }}
+          TAG: 'Mytag'
        with:
           github-token: ${{ github.token }}
           script: |
             github.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-             ref: "refs/tags/${{ steps.set-tag.outputs.tag_name }}",
+             ref: "refs/tags/Mytag",
               sha: context.sha
             })
      - name: Create release
        uses: ncipollo/release-action@v1
        with:
-        tag: ${{ steps.set-tag.outputs.tag_name }}
+        tag: 'Mytag'
         bodyFile: './release_notes.txt'
         token: ${{ secrets.GITHUB_TOKEN }}
