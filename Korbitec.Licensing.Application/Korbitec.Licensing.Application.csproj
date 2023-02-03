@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Queries\GetActivationCodeStatus\**" />
+    <EmbeddedResource Remove="Queries\GetActivationCodeStatus\**" />
+    <None Remove="Queries\GetActivationCodeStatus\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Korbitec.Licensing.Common\Korbitec.Licensing.Common.csproj" />
+    <ProjectReference Include="..\Korbitec.Licensing.Enums\Korbitec.Licensing.Enums.csproj" />
+  </ItemGroup>
+
+</Project>

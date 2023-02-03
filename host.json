@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  },
+  "retry": {
+    "strategy": "fixedDelay",
+    "maxRetryCount": 5,
+    "delayInterval": "00:01:00" //One minute retry in case of a cold start
+  }
+}

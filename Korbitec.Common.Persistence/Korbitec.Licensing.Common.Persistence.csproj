@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EntityFrameworkCore\Entities\**" />
+    <EmbeddedResource Remove="EntityFrameworkCore\Entities\**" />
+    <None Remove="EntityFrameworkCore\Entities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Korbitec.Licensing.Common\Korbitec.Licensing.Common.csproj" />
+  </ItemGroup>
+
+</Project>

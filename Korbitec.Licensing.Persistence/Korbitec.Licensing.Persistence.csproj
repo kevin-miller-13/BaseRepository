@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Korbitec.Common.Persistence\Korbitec.Licensing.Common.Persistence.csproj" />
+    <ProjectReference Include="..\Korbitec.Licensing.Application\Korbitec.Licensing.Application.csproj" />
+  </ItemGroup>
+
+</Project>

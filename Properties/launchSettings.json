@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "acl-licensing-functions": {
+      "commandName": "Project",
+      "commandLineArgs": "host start --port 7070"
+    }
+  }
+}
