@@ -17,7 +17,7 @@ jobs:
           echo very basic and easy-to-understand workflow.          
      - name: Set Tag Output
        id: set-tag
-       run:  echo "::set-output name=tag_name::$(sh get-version.sh)"
+       run:  echo "::set-output name=tag_name::$(sh ./.github/workflows/get-version.sh)"
      - name: Create Tag
        uses: actions/github-script@v3
        env:
