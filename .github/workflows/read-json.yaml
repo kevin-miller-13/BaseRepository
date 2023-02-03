@@ -40,7 +40,7 @@ jobs:
            uses: schdck/create-env-json@v1
            id: create-env
            with:
-            file-name: '.github/workflows/package.json'
-            Build: $BUILD
-            Major: $NEW_MAJOR_VERSION 
-            Minor: $MINOR
+            file-name: 'package.json'
+            Build: "$BUILD"
+            Major: "$NEW_MAJOR_VERSION"
+            Minor: "$MINOR"
