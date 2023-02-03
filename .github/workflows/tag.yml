@@ -18,14 +18,14 @@ jobs:
      - name: Create Tag
        uses: actions/github-script@v3
        env:
-          TAG: 'Mytag2'
+          TAG: 'Mytag3'
        with:
           github-token: ${{ github.token }}
           script: |
             github.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-             ref: "refs/tags/Mytag2",
+             ref: "refs/tags/Mytag3",
               sha: context.sha
             })
      - name: Create release
