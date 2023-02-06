@@ -11,7 +11,7 @@ jobs:
       
     - name: Create file
       run: |
-        printf "Hello\nWorld\n" > hw.txt
+        printf "Hello\nWorld\neasdfadfdf" > hw.txt
         
     - name: Commit & Push
       run: |
