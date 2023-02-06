@@ -48,9 +48,11 @@ jobs:
             
          - name: Commit & Push
            run: |
-              git config --local user.email "kevinm@korbicom.com"
-              git config --local user.name "GitHub Action"
+              git config --list
+              git config --global user.email "kevinm@korbicom.com"
+              git config --global user.name "GitHub Action"
               git add -A
               git commit -m 'Kevins message'
               git push -u origin master
+              
     
