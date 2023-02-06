@@ -47,7 +47,7 @@ jobs:
            with:
             file: .github/workflows/package.json
             field: Major
-            value: "$NEW_MAJOR_VERSION"      
+            value: ${{env.NEW_MAJOR_VERSION}}   
             
          - name: Commit & Push
            run: |
