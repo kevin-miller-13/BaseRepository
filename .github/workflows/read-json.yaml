@@ -39,9 +39,9 @@ jobs:
          - name: Update my-file.json description
            uses: jossef/action-set-json-field@v2.1
            with:
-            file: package.json
+            file: .github/workflows/package.json
             field: Major
-            value: $NEW_MAJOR_VERSION      
+            value: "$NEW_MAJOR_VERSION"      
             
          - name: Commit & Push
            run: |
