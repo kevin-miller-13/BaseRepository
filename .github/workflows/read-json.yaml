@@ -11,6 +11,9 @@ jobs:
       
         steps:
            
+         - name: Checkout
+           uses: actions/checkout@v2
+
          - name: Read Json File
            id: json_properties
            uses: zoexx/github-action-json-file-properties@release
@@ -35,10 +38,7 @@ jobs:
            run: |
              echo $MAJOR
              echo $NEW_MAJOR_VERSION    
-
-         - name: Checkout
-           uses: actions/checkout@v2
-           
+          
          - name: Update description
            uses: jossef/action-set-json-field@v2.1
            with:
