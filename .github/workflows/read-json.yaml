@@ -47,7 +47,7 @@ jobs:
            run: |
             git config --local user.email "kevinm@korbicom.com"
             git config --local user.name "GitHub Action"
-            git add /.github/workflows/package.json
+            git add .github/workflows/package.json
             git commit
             git push origin master  
     
