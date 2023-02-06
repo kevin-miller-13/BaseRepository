@@ -7,14 +7,11 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         
-        permissions: read-all|write-all
+        permissions: write-all
       
         steps:
-        
          - name: Checkout
            uses: actions/checkout@v2
-           with:
-            ref: ${{ github.head_ref }}
             
          - name: Read Json File
            id: json_properties
@@ -50,7 +47,6 @@ jobs:
             
          - uses: stefanzweifel/git-auto-commit-action@v4
            with:
-             token: ${{ secrets.GITHUB_TOKEN }}
              commit_message: Apply php-cs-fixer changes
              
         
