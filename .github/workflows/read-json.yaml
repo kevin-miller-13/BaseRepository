@@ -41,16 +41,13 @@ jobs:
            with:
             file: package.json
             field: Major
-            value: 2  
+            value: $NEW_MAJOR_VERSION      
             
-         - name: Commit files
+         - name: Commit & Push
            run: |
             git config --local user.email "kevinm@korbicom.com"
             git config --local user.name "GitHub Action"
             git add -A
-            git commit -m 'Kevins message'
-            
-         - name: Save1
-           run: |
-            printf "Hello\nWorld\n" > package11.json
+            git commit -m 'Update json'
+            git push -u origin master  
     
