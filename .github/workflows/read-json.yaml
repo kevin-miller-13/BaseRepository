@@ -48,6 +48,6 @@ jobs:
             git config --local user.email "kevinm@korbicom.com"
             git config --local user.name "GitHub Action"
             git add .github/workflows/package.json
-            git commit
+            git commit -m "dd"
             git push origin master  
     
