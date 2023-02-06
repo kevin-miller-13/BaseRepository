@@ -14,10 +14,7 @@ jobs:
         printf "Hello\nWorld\n" > hw.txt
         
     - name: Commit & Push
-      uses: Andro999b/push@v1.3
-      with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         branch: master
-         #force: true
-         message: 'Overwritten by Github Actions - ${date}'
+      run: |
+        git commit master
+        git push master
       
