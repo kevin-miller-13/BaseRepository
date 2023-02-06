@@ -43,11 +43,15 @@ jobs:
             field: Major
             value: "$NEW_MAJOR_VERSION"      
             
-         - name: Commit & Push
-           run: |
-            git config --local user.email "kevinm@korbicom.com"
-            git config --local user.name "GitHub Action"
-            git add .github/workflows/package.json
-            git commit -m "dd"
-            git push origin master  
+         - uses: stefanzweifel/git-auto-commit-action@v4
+           with:
+             commit_message: Apply php-cs-fixer changes
+        
+ #        - name: Commit & Push
+ #          run: |
+ #           git config --local user.email "kevinm@korbicom.com"
+ #           git config --local user.name "GitHub Action"
+ #           git add .github/workflows/package.json
+ #           git commit -m "dd"
+ #           git push origin master  
     
