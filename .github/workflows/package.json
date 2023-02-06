@@ -1,5 +1,5 @@
 {
-  "Build":"1",
-  "Major":"1",
-  "Minor":"0"
+  "Build": "1",
+  "Major": "$NEW_MAJOR_VERSION",
+  "Minor": "0"
 }
