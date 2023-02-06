@@ -48,5 +48,5 @@ jobs:
             git config --local user.email "kevinm@korbicom.com"
             git config --local user.name "GitHub Action"
             git commit -m 'Update json'
-            git push -u origin master  
+            git push origin master  
     
